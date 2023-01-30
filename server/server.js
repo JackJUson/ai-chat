@@ -17,3 +17,12 @@ const app = express();
 
 // Middlewares
 app.use(cors());
+
+// Connecting backend to frontend
+app.use(express.json());
+
+app.get("/", async (req, res) => {
+  res.status(200).send({
+    message: "Hello World!",
+  });
+});
