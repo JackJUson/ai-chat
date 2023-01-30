@@ -26,3 +26,10 @@ app.get("/", async (req, res) => {
     message: "Hello World!",
   });
 });
+
+app.post("/", async (req, res) => {
+  try {
+    // Pass prompt from frontend
+    const prompt = req.body.prompt;
+  } catch (error) {}
+});
