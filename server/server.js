@@ -42,12 +42,12 @@ app.post("/", async (req, res) => {
       presence_penalty: 0,
     });
 
-    res.state(200).send({
+    res.status(200).send({
       bot: response.data.choices[0].text,
     });
   } catch (error) {
     console.log(error);
-    res.state(500).send({ error });
+    res.status(500).send({ error });
   }
 });
 
