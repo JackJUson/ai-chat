@@ -45,5 +45,8 @@ app.post("/", async (req, res) => {
     res.state(200).send({
       bot: response.data.choices[0].text,
     });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+    res.state(500).send({ error });
+  }
 });
