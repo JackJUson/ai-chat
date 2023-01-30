@@ -49,8 +49,8 @@ function chatStripe(isAi, value, uniqueId) {
             />
         </div>
         <div class="message" id=${uniqueId}>${value}</div>
+      </div>
     </div>
-  </div>
   `;
 }
 
